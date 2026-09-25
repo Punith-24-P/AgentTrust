@@ -1,0 +1,33 @@
+{
+  "document_id": "DOC-ENV-002",
+  "title": "Aethelgard Clean Watershed and Industrial Effluent Standards 2023",
+  "authority": "Environmental Protection Directorate",
+  "enacted_date": "2023-09-01",
+  "sections": [
+    {
+      "section_id": "§6",
+      "heading": "Mandatory Continuous Discharge Monitoring",
+      "content": "Industrial facilities categorized under Tier-A manufacturing must maintain continuous digital telemetry for dissolved heavy metals and biological oxygen demand. Recorded sensor logs must be retained for 5 years and synchronized with the central environmental repository every 60 minutes."
+    },
+    {
+      "section_id": "§15",
+      "heading": "Spill Reporting Protocol and Remediation Timelines",
+      "content": "Any accidental release exceeding 50 liters of chemical solvent into municipal storm drains requires telephonic notice to the Environmental Hazard Response Unit within 2 hours, followed by a formal incident diagnostic report within 48 hours."
+    },
+    {
+      "section_id": "§22",
+      "heading": "Rainwater Harvesting Mandate for Commercial Zones",
+      "content": "Commercial structures exceeding 2,500 square meters of roof area must install rainwater retention systems capable of capturing at least 80% of quarterly precipitation. Verification inspections occur biennially by certified municipal hydrologists."
+    },
+    {
+      "section_id": "§31",
+      "heading": "Penalties and Temporary Operating Suspension",
+      "content": "Facilities exceeding permissible biological oxygen demand limits for more than 3 consecutive billing cycles are subject to an automatic 30-day operational suspension and a punitive assessment of 25,000 credits."
+    }
+  ],
+  "metadata": {
+    "jurisdiction": "Aethelgard Metropolitan Region",
+    "status": "Active Statutory Policy",
+    "version": "1.8.0"
+  }
+}

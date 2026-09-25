@@ -1,0 +1,28 @@
+{
+  "document_id": "DOC-DSA-004",
+  "title": "Aethelgard Municipal Digital Services and Citizen Data Privacy Framework 2023",
+  "authority": "Digital Innovation and Privacy Commission",
+  "enacted_date": "2023-11-20",
+  "sections": [
+    {
+      "section_id": "§5",
+      "heading": "Citizen Right to Data Portability and Erasure",
+      "content": "Citizens may request a portable machine-readable export of all stored personal identification records within 15 calendar days at zero fee. Permanent erasure requests must be executed across all replication clusters within 30 days unless statutory audit holds apply."
+    },
+    {
+      "section_id": "§11",
+      "heading": "Security Incident and Breach Notification",
+      "content": "Any unencrypted exfiltration or unauthorized exposure of citizen records impacting more than 50 individuals must be communicated to the Privacy Commission within 24 hours of confirmation and directly to affected individuals within 72 hours."
+    },
+    {
+      "section_id": "§20",
+      "heading": "Automated Algorithmic Decision-Making Oversight",
+      "content": "Automated decision models utilized for municipal benefits eligibility must provide human-interpretable reasoning upon request. Citizens retain an absolute statutory right to demand human administrative re-adjudication within 14 calendar days of an adverse automated outcome."
+    }
+  ],
+  "metadata": {
+    "jurisdiction": "Aethelgard Metropolitan Region",
+    "status": "Active Statutory Policy",
+    "version": "1.4.5"
+  }
+}

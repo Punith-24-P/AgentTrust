@@ -1,0 +1,928 @@
+[
+  {
+    "id": "EN-001",
+    "language": "en",
+    "category": "correctness",
+    "question": "What is the standard permit filing timeline for public gatherings exceeding 150 attendees under the Civic Permits Directive?",
+    "expected_answer": "Applications for civic gathering permits exceeding 150 attendees must be submitted at least 30 calendar days prior to the event date under §4 to the Department of Urban Administration.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§4"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "30 calendar days",
+        "description": "Filing deadline prior to event date"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§4",
+        "description": "Governing section"
+      },
+      {
+        "id": "fact-3",
+        "type": "authority",
+        "expected": "Department of Urban Administration",
+        "description": "Enforcing authority"
+      }
+    ],
+    "potential_traps": ["Confusing with 72-hour emergency timeline", "Misquoting section as §12"]
+  },
+  {
+    "id": "EN-002",
+    "language": "en",
+    "category": "citation",
+    "question": "Under what section and timeline are civic gathering security deposits refunded following an event?",
+    "expected_answer": "Under §12, security deposits are refunded within 14 business days following event conclusion, provided no public property damage is assessed.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§12"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "14 business days",
+        "description": "Deposit refund timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§12",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Citing §4 instead of §12", "Stating 14 calendar days instead of business days"]
+  },
+  {
+    "id": "EN-003",
+    "language": "en",
+    "category": "grounding",
+    "question": "What is the statutory fine for operating amplified sound systems above 75 decibels past curfew hours?",
+    "expected_answer": "Under §18, violating the sound curfew incurs a statutory fine of 5,000 credits per fractional hour of violation under the Municipal Enforcement Council.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§18"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "5,000 credits",
+        "description": "Statutory fine amount"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§18",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Inventing ungrounded criminal jail time", "Stating 1,000 credits instead of 5,000 credits"]
+  },
+  {
+    "id": "EN-004",
+    "language": "en",
+    "category": "trajectory",
+    "question": "How long does the Board of Civic Arbitration have to render a final binding determination on a rejected permit appeal?",
+    "expected_answer": "The Board of Civic Arbitration must render a final binding determination within 21 calendar days under §25.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§25"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "21 calendar days",
+        "description": "Board decision timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§25",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Skipping document retrieval", "Repeating search loop"]
+  },
+  {
+    "id": "EN-005",
+    "language": "en",
+    "category": "grounding",
+    "question": "How long must Tier-A manufacturing facilities retain sensor logs for heavy metal discharges?",
+    "expected_answer": "Tier-A facilities must retain sensor logs for 5 years and synchronize every 60 minutes with the central environmental repository under §6 of DOC-ENV-002.",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§6"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "5 years",
+        "description": "Sensor log retention period"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§6",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Stating 1 year or 10 years without evidence"]
+  },
+  {
+    "id": "EN-006",
+    "language": "en",
+    "category": "correctness",
+    "question": "What is the mandatory telephonic notification window following an accidental chemical solvent release exceeding 50 liters?",
+    "expected_answer": "Telephonic notice must be made within 2 hours to the Environmental Hazard Response Unit under §15 of DOC-ENV-002, followed by a formal incident diagnostic report within 48 hours.",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§15"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "2 hours",
+        "description": "Telephonic notification deadline"
+      },
+      {
+        "id": "fact-2",
+        "type": "authority",
+        "expected": "Environmental Hazard Response Unit",
+        "description": "Notification recipient"
+      },
+      {
+        "id": "fact-3",
+        "type": "section",
+        "expected": "§15",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Confusing 2 hours with 48 hours formal report window"]
+  },
+  {
+    "id": "EN-007",
+    "language": "en",
+    "category": "citation",
+    "question": "What is the minimum roof area that triggers the mandatory rainwater retention mandate for commercial structures?",
+    "expected_answer": "Under §22 of DOC-ENV-002, commercial structures exceeding 2,500 square meters of roof area must install rainwater retention systems capturing at least 80% of quarterly precipitation.",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§22"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "2,500 square meters",
+        "description": "Threshold roof area"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§22",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Citing wrong document like DOC-CP-001"]
+  },
+  {
+    "id": "EN-008",
+    "language": "en",
+    "category": "correctness",
+    "question": "What public bidding threshold requires open competitive tender publishing for a minimum of 21 calendar days?",
+    "expected_answer": "Under §8 of DOC-PROC-003, all supply contracts estimated to exceed 100,000 credits require open competitive bidding published for at least 21 calendar days.",
+    "source_documents": [
+      {
+        "document_id": "DOC-PROC-003",
+        "section_id": "§8"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "100,000 credits",
+        "description": "Contract threshold"
+      },
+      {
+        "id": "fact-2",
+        "type": "deadline",
+        "expected": "21 calendar days",
+        "description": "Publication duration"
+      },
+      {
+        "id": "fact-3",
+        "type": "section",
+        "expected": "§8",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Stating 50,000 credits or 14 calendar days"]
+  },
+  {
+    "id": "KN-001",
+    "language": "kn",
+    "category": "translation",
+    "question": "ನಾಗರಿಕ ಸಭೆ ಪರವಾನಗಿ ಪಡೆಯಲು ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಎಷ್ಟು ದಿನಗಳ ಮುಂಚಿತವಾಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು?",
+    "expected_answer": "ನಾಗರಿಕ ಅನುಮತಿಗಳ ನಿರ್ದೇಶನದ §4 ರ ಪ್ರಕಾರ, 150 ಕ್ಕಿಂತ ಹೆಚ್ಚು ಭಾಗವಹಿಸುವ ಕಾರ್ಯಕ್ರಮಗಳಿಗಾಗಿ ಕನಿಷ್ಠ 30 ಕ್ಯಾಲೆಂಡರ್ ದಿನಗಳ ಮುಂಚಿತವಾಗಿ ನಗರಾಡಳಿತ ಇಲಾಖೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§4"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "30 calendar days",
+        "description": "Filing deadline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§4",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Translating 30 days into 60 days (major drift)", "Missing calendar days restriction"]
+  },
+  {
+    "id": "KN-002",
+    "language": "kn",
+    "category": "grounding",
+    "question": "ಕಾರ್ಯಕ್ರಮ ಮುಗಿದ ನಂತರ ಭದ್ರತಾ ಠೇವಣಿಯನ್ನು ಎಷ್ಟು ದಿನಗಳಲ್ಲಿ ಮರುಪಾವತಿಸಲಾಗುತ್ತದೆ?",
+    "expected_answer": "§12 ರ ಅಡಿಯಲ್ಲಿ, ಸಾರ್ವಜನಿಕ ಆಸ್ತಿಗೆ ಯಾವುದೇ ಹಾನಿಯಾಗದಿದ್ದರೆ, ಈವೆಂಟ್ ಮುಕ್ತಾಯದ ನಂತರ 14 ವ್ಯವಹಾರ ದಿನಗಳಲ್ಲಿ ಭದ್ರತಾ ಠೇವಣಿಯನ್ನು ಪೂರ್ಣವಾಗಿ ಮರುಪಾವತಿಸಲಾಗುತ್ತದೆ.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§12"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "14 business days",
+        "description": "Refund timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§12",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Claiming non-refundable deposit without grounds"]
+  },
+  {
+    "id": "KN-003",
+    "language": "kn",
+    "category": "translation",
+    "question": "ಶಬ್ದ ಕರ್ಫ್ಯೂ ಉಲ್ಲಂಘನೆಗೆ ನಿಗದಿಪಡಿಸಲಾದ ಶಾಸನಬದ್ಧ ದಂಡ ಎಷ್ಟು?",
+    "expected_answer": "§18 ರ ಪ್ರಕಾರ, ರಾತ್ರಿ ಕರ್ಫ್ಯೂ ಮೀರಿದ ಪ್ರತಿಯೊಂದು ಭಾಗಶಃ ಗಂಟೆಯ ಉಲ್ಲಂಘನೆಗೆ 5,000 ಕ್ರೆಡಿಟ್‌ಗಳ ಶಾಸನಬದ್ಧ ದಂಡವನ್ನು ವಿಧಿಸಲಾಗುತ್ತದೆ.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§18"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "5,000 credits",
+        "description": "Fine amount"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§18",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Mistranslating hourly fine into one-time flat fine"]
+  },
+  {
+    "id": "KN-004",
+    "language": "kn",
+    "category": "citation",
+    "question": "ತಿರಸ್ಕೃತ ಪರವಾನಗಿ ವಿರುದ್ಧ ಮೇಲ್ಮನವಿ ಸಲ್ಲಿಸಲು ಅರ್ಜಿದಾರರಿಗೆ ಎಷ್ಟು ದಿನಗಳ ಕಾಲಾವಕಾಶವಿದೆ?",
+    "expected_answer": "§25 ರ ಅಡಿಯಲ್ಲಿ, ಅಧಿಸೂಚನೆ ಬಂದ 10 ವ್ಯವಹಾರ ದಿನಗಳಲ್ಲಿ ನಾಗರಿಕ ಮಧ್ಯಸ್ಥಿಕೆ ಮಂಡಳಿಗೆ ಆಡಳಿತಾತ್ಮಕ ಮೇಲ್ಮನವಿ ಸಲ್ಲಿಸಬಹುದು.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§25"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "10 business days",
+        "description": "Appeal submission window"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§25",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Citing wrong section like §4"]
+  },
+  {
+    "id": "KN-005",
+    "language": "kn",
+    "category": "correctness",
+    "question": "ರಾಸಾಯನಿಕ ದ್ರಾವಕ ಸೋರಿಕೆಯಾದಾಗ ಪರಿಸರ ಅಪಾಯ ಪ್ರತಿಕ್ರಿಯೆ ಘಟಕಕ್ಕೆ ಎಷ್ಟು ಗಂಟೆಗಳಲ್ಲಿ ಕರೆ ಮಾಡಿ ತಿಳಿಸಬೇಕು?",
+    "expected_answer": "DOC-ENV-002 ರ §15 ರ ಪ್ರಕಾರ, 50 ಲೀಟರ್ ಮೀರಿದ ಸೋರಿಕೆಯನ್ನು 2 ಗಂಟೆಗಳ ಒಳಗೆ ದೂರವಾಣಿ ಮೂಲಕ ತಿಳಿಸಬೇಕು.",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§15"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "2 hours",
+        "description": "Notice window"
+      },
+      {
+        "id": "fact-2",
+        "type": "authority",
+        "expected": "Environmental Hazard Response Unit",
+        "description": "Authority name"
+      }
+    ],
+    "potential_traps": ["Stating 24 hours instead of 2 hours"]
+  },
+  {
+    "id": "KN-006",
+    "language": "kn",
+    "category": "translation",
+    "question": "ವಾಣಿಜ್ಯ ಕಟ್ಟಡಗಳು ಮಳೆನೀರು ಕೊಯ್ಲು ವ್ಯವಸ್ಥೆಯ ಮೂಲಕ ತ್ರೈಮಾಸಿಕ ಮಳೆಯ ಕನಿಷ್ಠ ಎಷ್ಟು ಶೇಕಡಾವನ್ನು ಸಂಗ್ರಹಿಸಬೇಕು?",
+    "expected_answer": "DOC-ENV-002 ರ §22 ರ ಪ್ರಕಾರ, 2,500 ಚದರ ಮೀಟರ್ ಮೀರಿದ ವಾಣಿಜ್ಯ ರಚನೆಗಳು ತ್ರೈಮಾಸಿಕ ಮಳೆಯ ಕನಿಷ್ಠ 80% ರಷ್ಟು ಸಂಗ್ರಹಿಸಬೇಕು.",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§22"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "80%",
+        "description": "Harvesting percentage"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§22",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Drifting 80% to 50% in back-translation"]
+  },
+  {
+    "id": "KN-007",
+    "language": "kn",
+    "category": "grounding",
+    "question": "ಸಣ್ಣ ಮಾರಾಟಗಾರರಿಗೆ ಪಾವತಿ ಮಾಡಲು ಗರಿಷ್ಠ ಗಡುವು ಎಷ್ಟು ದಿನಗಳು?",
+    "expected_answer": "DOC-PROC-003 ರ §27 ರ ಪ್ರಕಾರ, ಅನುಮೋದಿತ ಇನ್‌ವಾಯ್ಸ್‌ಗಳನ್ನು ರಶೀದಿ ಪಡೆದ 30 ಕ್ಯಾಲೆಂಡರ್ ದಿನಗಳಲ್ಲಿ ವಿಲೇವಾರಿ ಮಾಡಬೇಕು.",
+    "source_documents": [
+      {
+        "document_id": "DOC-PROC-003",
+        "section_id": "§27"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "30 calendar days",
+        "description": "Payment timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§27",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Claiming 60 days without basis in text"]
+  },
+  {
+    "id": "KN-008",
+    "language": "kn",
+    "category": "trajectory",
+    "question": "ನಾಗರಿಕ ಡೇಟಾ ಪೋರ್ಟಬಿಲಿಟಿ ವಿನಂತಿಗಳನ್ನು ಎಷ್ಟು ದಿನಗಳಲ್ಲಿ ಉಚಿತವಾಗಿ ನೀಡಬೇಕು?",
+    "expected_answer": "DOC-DSA-004 ರ §5 ರ ಅಡಿಯಲ್ಲಿ, ನಾಗರಿಕರಿಗೆ 15 ಕ್ಯಾಲೆಂಡರ್ ದಿನಗಳಲ್ಲಿ ಶೂನ್ಯ ಶುಲ್ಕದಲ್ಲಿ ಯಂತ್ರ-ಓದಬಲ್ಲ ದಾಖಲೆಗಳನ್ನು ಒದಗಿಸಬೇಕು.",
+    "source_documents": [
+      {
+        "document_id": "DOC-DSA-004",
+        "section_id": "§5"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "15 calendar days",
+        "description": "Data export timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§5",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Skipping document search step"]
+  },
+  {
+    "id": "HI-001",
+    "language": "hi",
+    "category": "correctness",
+    "question": "150 से अधिक उपस्थित लोगों वाली सार्वजनिक सभा की अनुमति के लिए आवेदन कार्यक्रम से कितने दिन पहले जमा करना अनिवार्य है?",
+    "expected_answer": "नागरिक अनुमति निर्देश के §4 के तहत, 150 से अधिक प्रतिभागियों वाली सभा के लिए कार्यक्रम की तारीख से कम से कम 30 कैलेंडर दिन पहले शहरी प्रशासन विभाग में आवेदन जमा करना होगा।",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§4"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "30 calendar days",
+        "description": "Permit timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§4",
+        "description": "Governing section"
+      },
+      {
+        "id": "fact-3",
+        "type": "authority",
+        "expected": "Department of Urban Administration",
+        "description": "Enforcing authority"
+      }
+    ],
+    "potential_traps": ["Confusing 30 calendar days with 15 business days"]
+  },
+  {
+    "id": "HI-002",
+    "language": "hi",
+    "category": "citation",
+    "question": "कार्यक्रम समाप्त होने के बाद सुरक्षा जमा राशि कितने दिनों के भीतर वापस की जाती है?",
+    "expected_answer": "§12 के अनुसार, सार्वजनिक संपत्ति को कोई नुकसान न होने पर, कार्यक्रम समाप्ति के 14 कार्य दिवसों के भीतर सुरक्षा जमा की पूर्ण वापसी की जाएगी।",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§12"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "14 business days",
+        "description": "Refund timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§12",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Citing wrong section §18"]
+  },
+  {
+    "id": "HI-003",
+    "language": "hi",
+    "category": "translation",
+    "question": "ध्वनि निषेध नियमों के उल्लंघन पर प्रति घंटे कितना वैधानिक जुर्माना लगाया जाता है?",
+    "expected_answer": "§18 के तहत, 75 डेसिबल से अधिक ध्वनि प्रणाली संचालित करने पर उल्लंघन के प्रत्येक आंशिक घंटे के लिए 5,000 क्रेडिट का वैधानिक जुर्माना लगेगा।",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§18"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "5,000 credits",
+        "description": "Fine amount"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§18",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Omitting the per-fractional-hour frequency in translation"]
+  },
+  {
+    "id": "HI-004",
+    "language": "hi",
+    "category": "grounding",
+    "question": "टियर-ए विनिर्माण सुविधाओं को भारी धातुओं के सेंसर लॉग कितने वर्षों तक सुरक्षित रखने होंगे?",
+    "expected_answer": "DOC-ENV-002 के §6 के अनुसार, टियर-ए सुविधाओं को सेंसर लॉग 5 वर्षों तक बनाए रखना होगा और प्रत्येक 60 मिनट में केंद्रीय पर्यावरण भंडार के साथ सिंक्रनाइज़ करना होगा।",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§6"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "5 years",
+        "description": "Log retention"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§6",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Contradicting source with 3 years"]
+  },
+  {
+    "id": "HI-005",
+    "language": "hi",
+    "category": "translation",
+    "question": "रासायनिक विलायक के 50 लीटर से अधिक आकस्मिक रिसाव होने पर पर्यावरण खतरा प्रतिक्रिया इकाई को कितने समय में सूचना देनी होगी?",
+    "expected_answer": "DOC-ENV-002 के §15 के अनुसार, 50 लीटर से अधिक रिसाव की सूचना 2 घंटे के भीतर टेलीफोन द्वारा पर्यावरण खतरा प्रतिक्रिया इकाई को देनी होगी।",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§15"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "2 hours",
+        "description": "Phone alert deadline"
+      },
+      {
+        "id": "fact-2",
+        "type": "authority",
+        "expected": "Environmental Hazard Response Unit",
+        "description": "Authority name"
+      }
+    ],
+    "potential_traps": ["Major translation drift altering 2 hours to 2 days"]
+  },
+  {
+    "id": "HI-006",
+    "language": "hi",
+    "category": "trajectory",
+    "question": "सार्वजनिक आपूर्ति अनुबंधों के लिए खुली प्रतिस्पर्धी निविदा प्रकाशित करने की न्यूनतम अवधि क्या है?",
+    "expected_answer": "DOC-PROC-003 के §8 के तहत, 100,000 क्रेडिट से अधिक के अनुबंधों के लिए पोर्टल पर कम से कम 21 कैलेंडर दिनों के लिए खुली प्रतिस्पर्धी बोली प्रकाशित की जानी चाहिए।",
+    "source_documents": [
+      {
+        "document_id": "DOC-PROC-003",
+        "section_id": "§8"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "21 calendar days",
+        "description": "Tender posting duration"
+      },
+      {
+        "id": "fact-2",
+        "type": "number",
+        "expected": "100,000 credits",
+        "description": "Tender threshold"
+      }
+    ],
+    "potential_traps": ["Executing redundant search loops"]
+  },
+  {
+    "id": "HI-007",
+    "language": "hi",
+    "category": "citation",
+    "question": "नगर परिषद सदस्यों के साथ पारिवारिक संबंधों का खुलासा न करने पर कितने समय के लिए निविदा से वंचित किया जाएगा?",
+    "expected_answer": "DOC-PROC-003 के §16 के अनुसार, हितों के टकराव का खुलासा न करने पर नगर निगम अनुबंधों से 3 वर्ष के लिए प्रतिबंधित किया जाएगा।",
+    "source_documents": [
+      {
+        "document_id": "DOC-PROC-003",
+        "section_id": "§16"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "3-year debarment",
+        "description": "Debarment duration"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§16",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Citing non-existent section §99"]
+  },
+  {
+    "id": "HI-008",
+    "language": "hi",
+    "category": "grounding",
+    "question": "50 से अधिक व्यक्तियों को प्रभावित करने वाले डेटा उल्लंघन की सूचना गोपनीयता आयोग को कितने समय में दी जानी चाहिए?",
+    "expected_answer": "DOC-DSA-004 के §11 के अनुसार, 50 से अधिक व्यक्तियों को प्रभावित करने वाले डेटा उल्लंघन की पुष्टि के 24 घंटे के भीतर गोपनीयता आयोग को सूचित किया जाना चाहिए।",
+    "source_documents": [
+      {
+        "document_id": "DOC-DSA-004",
+        "section_id": "§11"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "24 hours",
+        "description": "Commission notice deadline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§11",
+        "description": "Governing section"
+      }
+    ],
+    "potential_traps": ["Asserting completely ungrounded indemnity waivers"]
+  },
+  {
+    "id": "TE-001",
+    "language": "te",
+    "category": "correctness",
+    "question": "150 మందికి పైగా హాజరయ్యే ప్రజా సభల అనుమతి కోసం ఎన్ని రోజుల ముందు దరఖాస్తు చేసుకోవాలి?",
+    "expected_answer": "పౌర అనుమతుల ఆదేశం యొక్క §4 ప్రకారం, 150 మందికి పైగా పాల్గొనే సభల కోసం ఈవెంట్ తేదీకి కనీసం 30 క్యాలెండర్ రోజుల ముందు పట్టణ పరిపాలన విభాగానికి దరఖాస్తు చేసుకోవాలి.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§4"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "30 calendar days",
+        "description": "Permit timeline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§4",
+        "description": "Section reference"
+      },
+      {
+        "id": "fact-3",
+        "type": "authority",
+        "expected": "Department of Urban Administration",
+        "description": "Authority name"
+      }
+    ],
+    "potential_traps": ["Providing incorrect day count 45 days"]
+  },
+  {
+    "id": "TE-002",
+    "language": "te",
+    "category": "translation",
+    "question": "ఈవెంట్ ముగిసిన తర్వాత సెక్యూరిటీ డిపాజిట్ ఎన్ని రోజుల్లో తిరిగి చెల్లించబడుతుంది?",
+    "expected_answer": "§12 ప్రకారం, ప్రజా ఆస్తికి ఎలాంటి నష్టం వాటిల్లకపోతే, ఈవెంట్ ముగిసిన 14 పని దినాలలోపు సెక్యూరిటీ డిపాజిట్ పూర్తిగా తిరిగి ఇవ్వబడుతుంది.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§12"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "14 business days",
+        "description": "Refund window"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§12",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Translating 14 business days as 14 months"]
+  },
+  {
+    "id": "TE-003",
+    "language": "te",
+    "category": "citation",
+    "question": "శబ్ద పరిమితులను ఉల్లంఘించినప్పుడు విధించే చట్టబద్ధమైన జరిమానా ఎంత మరియు ఏ సెక్షన్ వర్తిస్తుంది?",
+    "expected_answer": "§18 ప్రకారం, 75 డెసిబుల్స్ దాటిన సౌండ్ సిస్టమ్‌లను నడిపితే ప్రతి పాక్షిక గంట ఉల్లంఘనకు 5,000 క్రెడిట్ల చట్టబద్ధమైన జరిమానా విధించబడుతుంది.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§18"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "5,000 credits",
+        "description": "Fine amount"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§18",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Citing wrong section or wrong fine"]
+  },
+  {
+    "id": "TE-004",
+    "language": "te",
+    "category": "grounding",
+    "question": "తిరస్కరించబడిన అనుమతి అప్పీల్‌పై పౌర మధ్యవర్తిత్వ బోర్డు తుది నిర్ణయం ఇవ్వడానికి ఎంత సమయం ఉంటుంది?",
+    "expected_answer": "DOC-CP-001 లోని §25 ప్రకారం, పౌర మధ్యవర్తిత్వ బోర్డు 21 క్యాలెండర్ రోజులలోపు తుది బైండింగ్ నిర్ణయం ఇవ్వాలి.",
+    "source_documents": [
+      {
+        "document_id": "DOC-CP-001",
+        "section_id": "§25"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "21 calendar days",
+        "description": "Resolution time"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§25",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Claiming decision is non-binding without evidence"]
+  },
+  {
+    "id": "TE-005",
+    "language": "te",
+    "category": "translation",
+    "question": "50 లీటర్లకు మించి రసాయన ద్రావకం లీక్ అయినప్పుడు పర్యావరణ ప్రమాద ప్రతిస్పందన యూనిట్‌కు ఎంత సమయంలోగా తెలియజేయాలి?",
+    "expected_answer": "DOC-ENV-002 లోని §15 ప్రకారం, 50 లీటర్లు దాటిన లీకేజీని 2 గంటల్లోపు టెలిఫోన్ ద్వారా పర్యావరణ ప్రమాద ప్రతిస్పందన యూనిట్‌కు నివేదించాలి.",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§15"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "2 hours",
+        "description": "Telephone notice"
+      },
+      {
+        "id": "fact-2",
+        "type": "authority",
+        "expected": "Environmental Hazard Response Unit",
+        "description": "Agency name"
+      }
+    ],
+    "potential_traps": ["Back-translation changing 2 hours to indefinite time"]
+  },
+  {
+    "id": "TE-006",
+    "language": "te",
+    "category": "correctness",
+    "question": "వాణిజ్య భవనాలలో వర్షపు నీటి నిల్వ వ్యవస్థ తప్పనిసరి కావడానికి కనీస పైకప్పు వైశాల్యం ఎంత ఉండాలి?",
+    "expected_answer": "DOC-ENV-002 లోని §22 ప్రకారం, 2,500 చదరపు మీటర్ల కంటే ఎక్కువ పైకప్పు వైశాల్యం ఉన్న వాణిజ్య భవనాలు వర్షపు నీటి నిల్వ వ్యవస్థలను కలిగి ఉండాలి.",
+    "source_documents": [
+      {
+        "document_id": "DOC-ENV-002",
+        "section_id": "§22"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "number",
+        "expected": "2,500 square meters",
+        "description": "Roof threshold"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§22",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Misstating 5,000 square meters"]
+  },
+  {
+    "id": "TE-007",
+    "language": "te",
+    "category": "trajectory",
+    "question": "చిన్న విక్రేతల నుండి ఆమోదించబడిన ఇన్‌వాయిస్‌లను చెల్లించడానికి గరిష్ట సమయం ఎంత?",
+    "expected_answer": "DOC-PROC-003 లోని §27 ప్రకారం, రిజిస్టర్డ్ చిన్న విక్రేతల ఇన్‌వాయిస్‌లను 30 క్యాలెండర్ రోజుల్లోపు చెల్లించాలి.",
+    "source_documents": [
+      {
+        "document_id": "DOC-PROC-003",
+        "section_id": "§27"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "30 calendar days",
+        "description": "Liquidation deadline"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§27",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Agent stalling without retrieving DOC-PROC-003"]
+  },
+  {
+    "id": "TE-008",
+    "language": "te",
+    "category": "citation",
+    "question": "స్వయంచాలక నిర్ణయాల విషయంలో పౌరులు ఎన్ని రోజులలోపు మానవ పునఃపరిశీలనను కోరవచ్చు?",
+    "expected_answer": "DOC-DSA-004 లోని §20 ప్రకారం, పౌరులు ప్రతికూల ఆటోమేటెడ్ ఫలితం వచ్చిన 14 క్యాలెండర్ రోజులలోపు మానవ పునఃపరిశీలనను డిమాండ్ చేయవచ్చు.",
+    "source_documents": [
+      {
+        "document_id": "DOC-DSA-004",
+        "section_id": "§20"
+      }
+    ],
+    "required_facts": [
+      {
+        "id": "fact-1",
+        "type": "deadline",
+        "expected": "14 calendar days",
+        "description": "Re-adjudication window"
+      },
+      {
+        "id": "fact-2",
+        "type": "section",
+        "expected": "§20",
+        "description": "Section reference"
+      }
+    ],
+    "potential_traps": ["Citing wrong section or invalid document ID"]
+  }
+]

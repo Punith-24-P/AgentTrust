@@ -1,0 +1,33 @@
+{
+  "document_id": "DOC-CP-001",
+  "title": "Aethelgard Municipal Civic Permits and Public Assembly Directive 2024",
+  "authority": "Department of Urban Administration",
+  "enacted_date": "2024-01-15",
+  "sections": [
+    {
+      "section_id": "§4",
+      "heading": "Standard Permit Filing Timelines",
+      "content": "All applications for civic gathering permits exceeding 150 attendees must be submitted at least 30 calendar days prior to the proposed event date. Emergency notifications require a minimum 72-hour window accompanied by Form U-88."
+    },
+    {
+      "section_id": "§12",
+      "heading": "Refund and Cancellation Policy",
+      "content": "A full refund of security deposits shall be remitted within 14 business days following event conclusion, provided no public property damage is assessed by the municipal inspectorate. Incurred cleanup deductions must not exceed 25% of total deposit without written arbitration notice."
+    },
+    {
+      "section_id": "§18",
+      "heading": "Noise Abatement and Curfew Restrictions",
+      "content": "Amplified acoustic systems operating above 75 decibels must cease operation strictly at 22:00 hours on weekdays and 23:00 hours on public holidays. Failure to comply incurs a statutory fine of 5,000 credits per fractional hour of violation under the Municipal Enforcement Council."
+    },
+    {
+      "section_id": "§25",
+      "heading": "Appeals and Expedited Review Mechanism",
+      "content": "An applicant whose permit has been rejected may file an administrative appeal to the Board of Civic Arbitration within 10 business days of notification. The Board shall render a final binding determination within 21 calendar days."
+    }
+  ],
+  "metadata": {
+    "jurisdiction": "Aethelgard Metropolitan Region",
+    "status": "Active Statutory Policy",
+    "version": "2.4.1"
+  }
+}

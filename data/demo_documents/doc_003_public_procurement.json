@@ -1,0 +1,28 @@
+{
+  "document_id": "DOC-PROC-003",
+  "title": "Aethelgard Municipal Public Procurement and Vendor Ethics Code 2024",
+  "authority": "Public Tender and Procurement Board",
+  "enacted_date": "2024-03-10",
+  "sections": [
+    {
+      "section_id": "§8",
+      "heading": "Competitive Bidding Thresholds",
+      "content": "All supply contracts estimated to exceed 100,000 credits must undergo open public competitive bidding published on the municipal portal for a minimum of 21 calendar days. Sealed tenders opened prior to deadline expiration will be immediately nullified."
+    },
+    {
+      "section_id": "§16",
+      "heading": "Conflict of Interest Disclosures",
+      "content": "All prospective tenderers must submit an affirmative conflict-of-interest declaration listing any familial relationships within the second degree of consanguinity to sitting council members. Failure to disclose results in a 3-year debarment from municipal contracting."
+    },
+    {
+      "section_id": "§27",
+      "heading": "Prompt Payment to Small Enterprises",
+      "content": "Approved invoices submitted by registered small and micro vendors must be liquidated within 30 calendar days from formal receipt. Overdue invoices accrue statutory interest calculated at 1.5% per month compounded quarterly."
+    }
+  ],
+  "metadata": {
+    "jurisdiction": "Aethelgard Metropolitan Region",
+    "status": "Active Statutory Policy",
+    "version": "3.1.2"
+  }
+}

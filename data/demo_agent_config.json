@@ -1,0 +1,28 @@
+{
+  "name": "CivicTrust RAG Assistant (Demo)",
+  "version": "1.0.0-baseline",
+  "description": "Demonstration AI agent with document retrieval, multilingual response generation, and controlled simulation error modes for reliability testing.",
+  "adapter_type": "demo",
+  "supported_languages": ["en", "kn", "hi", "te"],
+  "simulation_modes": {
+    "baseline": {
+      "wrong_fact_rate": 0.15,
+      "citation_error_rate": 0.12,
+      "translation_drift_rate": 0.18,
+      "unsupported_claim_rate": 0.12,
+      "retrieval_skip_rate": 0.06,
+      "loop_anomaly_rate": 0.06
+    },
+    "optimized": {
+      "wrong_fact_rate": 0.0,
+      "citation_error_rate": 0.0,
+      "translation_drift_rate": 0.0,
+      "unsupported_claim_rate": 0.0,
+      "retrieval_skip_rate": 0.0,
+      "loop_anomaly_rate": 0.0
+    }
+  },
+  "default_mode": "baseline",
+  "model": "agenttrust-demo-hybrid",
+  "is_simulation": true
+}

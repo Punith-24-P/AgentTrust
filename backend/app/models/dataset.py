@@ -1,0 +1,41 @@
+from datetime import datetime, timezone
+import uuid
+from typing import Optional, Any
+from sqlalchemy import String, Text, DateTime, ForeignKey, JSON
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+from app.database import Base
+
+
+class Dataset(Base):
+    __tablename__ = "datasets"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    project_id: Mapped[str] = mapped_column(String(36), ForeignKey("projects.id", ondelete="CASCADE"), nullable=False)
+    name: Mapped[str] = mapped_column(String(100), nullable=False)
+    description: Mapped[str] = mapped_column(Text, nullable=True, default="")
+    version: Mapped[str] = mapped_column(String(50), default="1.0.0")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    # Relationships
+    project = relationship("Project", back_populates="datasets")
+    test_cases = relationship("TestCase", back_populates="dataset", cascade="all, delete-orphan")
+    runs = relationship("Run", back_populates="dataset", cascade="all, delete-orphan")
+
+
+class TestCase(Base):
+    __tablename__ = "test_cases"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    dataset_id: Mapped[str] = mapped_column(String(36), ForeignKey("datasets.id", ondelete="CASCADE"), nullable=False)
+    external_id: Mapped[str] = mapped_column(String(50), nullable=False)  # e.g., "EN-001"
+    language: Mapped[str] = mapped_column(String(10), nullable=False)     # "en", "kn", "hi", "te"
+    category: Mapped[str] = mapped_column(String(50), default="general")
+    question: Mapped[str] = mapped_column(Text, nullable=False)
+    expected_answer: Mapped[str] = mapped_column(Text, nullable=False)
+    source_documents: Mapped[Any] = mapped_column(JSON, default=list)
+    required_facts: Mapped[Any] = mapped_column(JSON, default=list)
+    potential_traps: Mapped[Any] = mapped_column(JSON, default=list)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    # Relationships
+    dataset = relationship("Dataset", back_populates="test_cases")
