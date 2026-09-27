@@ -12,6 +12,11 @@ class Settings(BaseSettings):
     # Database: Supports SQLite (zero-config local) & PostgreSQL (production / Docker)
     DATABASE_URL: str = "sqlite+aiosqlite:///./agenttrust.db"
 
+    # Authentication & Security
+    JWT_SECRET: str = "agenttrust-super-secret-key-change-in-production-2026"
+    JWT_ALGORITHM: str = "HS256"
+    JWT_EXPIRATION_MINUTES: int = 1440  # 24 hours
+
     # AI / LLM Layer
     LLM_PROVIDER: str = "mock"  # "mock" | "openai" | "openai_compatible"
     LLM_API_KEY: str = ""

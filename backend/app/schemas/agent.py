@@ -24,3 +24,11 @@ class AgentResponse(AgentBase):
     created_at: datetime
 
     model_config = ConfigDict(from_attributes=True)
+
+
+class AgentConnectionTestResponse(BaseModel):
+    status: str  # "SUCCESS" or "ERROR"
+    latency_ms: int
+    status_code: Optional[int] = None
+    message: str
+    details: Dict[str, Any] = Field(default_factory=dict)

@@ -1,5 +1,21 @@
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  is_active: boolean;
+}
+
+export interface Workspace {
+  id: string;
+  name: string;
+  slug: string;
+  owner_id: string;
+  created_at: string;
+}
+
 export interface Project {
   id: string;
+  workspace_id?: string;
   name: string;
   description?: string;
   created_at: string;
@@ -20,6 +36,14 @@ export interface Agent {
   created_at: string;
 }
 
+export interface AgentConnectionTestResult {
+  status: "SUCCESS" | "ERROR";
+  latency_ms: number;
+  status_code?: number;
+  message: string;
+  details: Record<string, any>;
+}
+
 export interface RequiredFact {
   id: string;
   type: string;
@@ -35,6 +59,7 @@ export interface SourceDocumentRef {
 export interface TestCase {
   id: string;
   dataset_id: string;
+  version?: string;
   external_id: string;
   language: string;
   category: string;
@@ -43,6 +68,18 @@ export interface TestCase {
   source_documents: SourceDocumentRef[];
   required_facts: RequiredFact[];
   potential_traps: string[];
+  expected_retrieval?: boolean;
+  expected_tools?: string[];
+  created_at: string;
+}
+
+export interface DatasetVersion {
+  id: string;
+  dataset_id: string;
+  version: string;
+  is_published: boolean;
+  test_cases_count: number;
+  changelog?: string;
   created_at: string;
 }
 
@@ -53,6 +90,36 @@ export interface Dataset {
   description?: string;
   version: string;
   test_cases_count?: number;
+  versions?: DatasetVersion[];
+  created_at: string;
+}
+
+export interface DatasetValidationIssue {
+  test_case_id?: string;
+  level: "ERROR" | "WARNING";
+  field: string;
+  message: string;
+}
+
+export interface DatasetValidationReport {
+  dataset_id: string;
+  is_valid: boolean;
+  total_test_cases: number;
+  errors_count: number;
+  warnings_count: number;
+  issues: DatasetValidationIssue[];
+  languages: string[];
+}
+
+export interface EvaluationProfile {
+  id: string;
+  workspace_id?: string;
+  name: string;
+  description?: string;
+  checks: Record<string, boolean>;
+  weights: Record<string, number>;
+  thresholds: Record<string, any>;
+  is_default: boolean;
   created_at: string;
 }
 
@@ -133,7 +200,9 @@ export interface RunItem {
   dataset_id: string;
   agent_version: string;
   dataset_version: string;
-  status: "PENDING" | "RUNNING" | "COMPLETED" | "FAILED";
+  status: "PENDING" | "RUNNING" | "COMPLETED" | "FAILED" | "PARTIAL" | "CANCELLED";
+  is_demo?: boolean;
+  evaluation_profile_id?: string;
   evaluators_config: Record<string, boolean>;
   total_tests: number;
   completed_tests: number;
@@ -222,4 +291,40 @@ export interface RunComparison {
   after_version: string;
   metrics: Record<string, ComparisonDelta>;
   language_deltas: Record<string, Record<string, ComparisonDelta>>;
+}
+
+export interface PreFlightResult {
+  status: "READY" | "BLOCKED";
+  agent_reachable: boolean;
+  dataset_valid: boolean;
+  evaluation_profile_valid: boolean;
+  llm_provider_configured: boolean;
+  documents_available: boolean;
+  total_test_cases: number;
+  issues: string[];
+  warnings: string[];
+}
+
+export interface RegressionTestCase {
+  test_case_id: string;
+  external_id: string;
+  language: string;
+  question: string;
+  baseline_status: string;
+  current_status: string;
+  change_type: "REGRESSION" | "IMPROVEMENT" | "UNCHANGED";
+  baseline_score: number;
+  current_score: number;
+  failure_reason?: string;
+  severity?: string;
+}
+
+export interface RegressionAnalysis {
+  baseline_run_id: string;
+  current_run_id: string;
+  regression_detected: boolean;
+  regressions_count: number;
+  improvements_count: number;
+  unchanged_count: number;
+  test_cases: RegressionTestCase[];
 }

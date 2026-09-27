@@ -18,7 +18,13 @@ class RunCreate(BaseModel):
     project_id: str
     agent_id: str
     dataset_id: str
+    agent_version: Optional[str] = None
+    dataset_version: Optional[str] = None
+    evaluation_profile_id: Optional[str] = None
     evaluators_config: Optional[EvaluatorsConfigSchema] = Field(default_factory=EvaluatorsConfigSchema)
+    concurrency: Optional[int] = 4
+    test_case_subset: Optional[List[str]] = None  # optional list of test case IDs
+    is_demo: Optional[bool] = False
 
 
 class RunResponse(BaseModel):
@@ -29,6 +35,8 @@ class RunResponse(BaseModel):
     agent_version: str
     dataset_version: str
     status: str
+    is_demo: bool = False
+    evaluation_profile_id: Optional[str] = None
     evaluators_config: Dict[str, Any]
     total_tests: int
     completed_tests: int
@@ -106,3 +114,46 @@ class RunComparisonResponse(BaseModel):
     after_version: str
     metrics: Dict[str, RunComparisonItem]
     language_deltas: Dict[str, Dict[str, RunComparisonItem]]
+
+
+class PreFlightCheckRequest(BaseModel):
+    agent_id: str
+    dataset_id: str
+    dataset_version: Optional[str] = None
+    evaluation_profile_id: Optional[str] = None
+
+
+class PreFlightCheckResponse(BaseModel):
+    status: str  # "READY" or "BLOCKED"
+    agent_reachable: bool
+    dataset_valid: bool
+    evaluation_profile_valid: bool
+    llm_provider_configured: bool
+    documents_available: bool
+    total_test_cases: int
+    issues: List[str] = Field(default_factory=list)
+    warnings: List[str] = Field(default_factory=list)
+
+
+class RegressionTestCase(BaseModel):
+    test_case_id: str
+    external_id: str
+    language: str
+    question: str
+    baseline_status: str
+    current_status: str
+    change_type: str  # "REGRESSION", "IMPROVEMENT", "UNCHANGED"
+    baseline_score: float
+    current_score: float
+    failure_reason: Optional[str] = ""
+    severity: Optional[str] = "LOW"
+
+
+class RegressionAnalysisResponse(BaseModel):
+    baseline_run_id: str
+    current_run_id: str
+    regression_detected: bool
+    regressions_count: int
+    improvements_count: int
+    unchanged_count: int
+    test_cases: List[RegressionTestCase] = Field(default_factory=list)

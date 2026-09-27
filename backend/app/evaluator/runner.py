@@ -20,9 +20,14 @@ class EvaluationRunner:
         self.db = db
         self.orchestrator = EvaluationOrchestrator()
 
-    async def execute_run(self, run_id: str) -> Run:
+    async def execute_run(
+        self,
+        run_id: str,
+        concurrency: Optional[int] = None,
+        test_case_subset: Optional[List[str]] = None
+    ) -> Run:
         """
-        Executes an entire evaluation run asynchronously across all dataset test cases.
+        Executes an entire evaluation run asynchronously across dataset test cases.
         Concurrent agent execution with synchronized database persistence.
         """
         # 1. Fetch Run, Agent, and TestCases
@@ -40,21 +45,29 @@ class EvaluationRunner:
 
         q_cases = select(TestCase).where(TestCase.dataset_id == run.dataset_id).order_by(TestCase.external_id)
         res_cases = await self.db.execute(q_cases)
-        test_cases = res_cases.scalars().all()
+        all_cases = res_cases.scalars().all()
+
+        if test_case_subset:
+            subset_set = set(test_case_subset)
+            test_cases = [tc for tc in all_cases if tc.id in subset_set or tc.external_id in subset_set]
+        else:
+            test_cases = all_cases
 
         if not test_cases:
             run.status = "FAILED"
-            run.error_message = "Dataset contains no test cases to evaluate."
+            run.error_message = "Dataset contains no matching test cases to evaluate."
             await self.db.commit()
             return run
 
         run.status = "RUNNING"
         run.started_at = datetime.now(timezone.utc)
         run.total_tests = len(test_cases)
+        run.completed_tests = 0
         await self.db.commit()
 
         start_time = time.time()
-        semaphore = asyncio.Semaphore(settings.MAX_CONCURRENCY)
+        effective_concurrency = concurrency or settings.MAX_CONCURRENCY
+        semaphore = asyncio.Semaphore(max(1, min(effective_concurrency, 10)))
         db_lock = asyncio.Lock()
 
         # Instantiate agent adapter
@@ -110,9 +123,9 @@ class EvaluationRunner:
                     trace_obj = TraceEvent(
                         agent_run_id=agent_run.id,
                         step=t_ev.get("step", 1),
-                        event_type=t_ev.get("event_type", "generation"),
-                        input_data=t_ev.get("input_data", {}),
-                        output_data=t_ev.get("output_data", {}),
+                        event_type=t_ev.get("event_type", t_ev.get("type", "generation")),
+                        input_data=t_ev.get("input_data", t_ev.get("input", {})),
+                        output_data=t_ev.get("output_data", t_ev.get("output", {})),
                         metadata_json=t_ev.get("metadata_json", {})
                     )
                     self.db.add(trace_obj)
@@ -180,12 +193,13 @@ class EvaluationRunner:
 
                 evaluation_records.append(eval_output)
                 run.completed_tests += 1
+                await self.db.commit()
 
         # Execute tests concurrently with controlled concurrency
         tasks = [process_test_case(tc) for tc in test_cases]
         await asyncio.gather(*tasks)
 
-        # Step G: Compute Overall Aggregate Metrics
+        # Step G: Compute Overall Aggregate Metrics dynamically
         run_metrics = MetricsEngine.compute_run_metrics(evaluation_records)
 
         # Save RunMetric model

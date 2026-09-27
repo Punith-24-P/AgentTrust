@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 import uuid
 from typing import Optional, Any
-from sqlalchemy import String, Text, DateTime, ForeignKey, JSON, Integer, Float
+from sqlalchemy import String, Text, DateTime, ForeignKey, JSON, Integer, Float, Boolean
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.database import Base
 
@@ -15,7 +15,10 @@ class Run(Base):
     dataset_id: Mapped[str] = mapped_column(String(36), ForeignKey("datasets.id", ondelete="CASCADE"), nullable=False)
     agent_version: Mapped[str] = mapped_column(String(50), default="1.0.0")
     dataset_version: Mapped[str] = mapped_column(String(50), default="1.0.0")
-    status: Mapped[str] = mapped_column(String(50), default="PENDING")  # PENDING, RUNNING, COMPLETED, FAILED
+    status: Mapped[str] = mapped_column(String(50), default="PENDING")  # PENDING, RUNNING, COMPLETED, FAILED, PARTIAL, CANCELLED
+    is_demo: Mapped[bool] = mapped_column(Boolean, default=False)
+    evaluation_profile_id: Mapped[Optional[str]] = mapped_column(String(36), nullable=True)
+    evaluation_profile_json: Mapped[Any] = mapped_column(JSON, default=dict)
     evaluators_config: Mapped[Any] = mapped_column(
         JSON,
         default=lambda: {
